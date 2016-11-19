@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ma.myworklab.feed2.menuActivity">
+
+    <include
+        layout="@layout/main_bar"
+        android:id="@+id/main_bar" />
+
+    <TextView
+        android:text="@string/textview"
+        android:layout_below="@id/main_bar"
+        android:layout_width="match_parent"
+        android:id="@+id/textView1"
+        android:layout_height="30dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:text="@string/News_list"
+        android:background="@android:color/darker_gray" />
+
+    <Switch
+        android:text="@string/hespress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:layout_below="@id/textView1"
+        android:switchPadding="230dp"
+        android:checked="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="savedPref" />
+
+    <Switch
+        android:text="@string/nytimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        android:layout_below="@id/switch1"
+        android:switchPadding="230dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="savedPref" />
+</RelativeLayout>
